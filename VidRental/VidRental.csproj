@@ -175,10 +175,65 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901230022428_InitialModel.cs" />
+    <Compile Include="Migrations\201901230022428_InitialModel.Designer.cs">
+      <DependentUpon>201901230022428_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230051438_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201901230051438_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201901230051438_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230101180_AddMemberType.cs" />
+    <Compile Include="Migrations\201901230101180_AddMemberType.Designer.cs">
+      <DependentUpon>201901230101180_AddMemberType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230114054_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201901230114054_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201901230114054_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230135084_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201901230135084_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201901230135084_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230240558_re-runAddMembershipType.cs" />
+    <Compile Include="Migrations\201901230240558_re-runAddMembershipType.Designer.cs">
+      <DependentUpon>201901230240558_re-runAddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230303304_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201901230303304_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201901230303304_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230318080_UpdateMembershipTyesNames.cs" />
+    <Compile Include="Migrations\201901230318080_UpdateMembershipTyesNames.Designer.cs">
+      <DependentUpon>201901230318080_UpdateMembershipTyesNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230334364_AddBirthdateToCustomer.cs" />
+    <Compile Include="Migrations\201901230334364_AddBirthdateToCustomer.Designer.cs">
+      <DependentUpon>201901230334364_AddBirthdateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230343293_AddBirthdateToCustomer1.cs" />
+    <Compile Include="Migrations\201901230343293_AddBirthdateToCustomer1.Designer.cs">
+      <DependentUpon>201901230343293_AddBirthdateToCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230425031_InitialModel1.cs" />
+    <Compile Include="Migrations\201901230425031_InitialModel1.Designer.cs">
+      <DependentUpon>201901230425031_InitialModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230442436_InitialModel2.cs" />
+    <Compile Include="Migrations\201901230442436_InitialModel2.Designer.cs">
+      <DependentUpon>201901230442436_InitialModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901230445369_PopulateGenreTable.cs" />
+    <Compile Include="Migrations\201901230445369_PopulateGenreTable.Designer.cs">
+      <DependentUpon>201901230445369_PopulateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -246,6 +301,7 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +313,47 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901230022428_InitialModel.resx">
+      <DependentUpon>201901230022428_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230051438_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201901230051438_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230101180_AddMemberType.resx">
+      <DependentUpon>201901230101180_AddMemberType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230114054_PopulateMembershipTypes.resx">
+      <DependentUpon>201901230114054_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230135084_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201901230135084_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230240558_re-runAddMembershipType.resx">
+      <DependentUpon>201901230240558_re-runAddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230303304_AddNameToMembershipType.resx">
+      <DependentUpon>201901230303304_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230318080_UpdateMembershipTyesNames.resx">
+      <DependentUpon>201901230318080_UpdateMembershipTyesNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230334364_AddBirthdateToCustomer.resx">
+      <DependentUpon>201901230334364_AddBirthdateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230343293_AddBirthdateToCustomer1.resx">
+      <DependentUpon>201901230343293_AddBirthdateToCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230425031_InitialModel1.resx">
+      <DependentUpon>201901230425031_InitialModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230442436_InitialModel2.resx">
+      <DependentUpon>201901230442436_InitialModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901230445369_PopulateGenreTable.resx">
+      <DependentUpon>201901230445369_PopulateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

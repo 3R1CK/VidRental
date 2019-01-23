@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using System.Reflection;
 using VidRental.Models;
 using VidRental.ViewModel;
 
@@ -10,6 +12,18 @@ namespace VidRental.Controllers
 {
     public class MoviesController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -37,16 +51,18 @@ namespace VidRental.Controllers
 
         public ActionResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(c=> c.Genre).ToList();
             return View(movies);
         }
-        private IEnumerable<Movie> GetMovies()
+
+        public ActionResult Details(int id)
         {
-            return new List<Movie>
-            {
-                new Movie {Name = "Shrek"},
-                new Movie {Name = "Wall-e"}
-            };
+            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie);
         }
+        
     }
 }
