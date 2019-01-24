@@ -12,5 +12,8 @@ namespace VidRental.Models
         public byte DurationInMonths { get; set; }
         public byte DiscountRate { get; set; }
         public string Name { get; set; }
+
+        public static readonly byte Unkwown = 0;
+        public static readonly byte PayAsYouGo = 1;
     }
 }
